@@ -1,0 +1,160 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colors and Common Styles */
+:root {
+    --primary-color: #007bff;
+    --light-gray: #f9f9f9;
+    --text-dark: #555;
+    --background-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --hover-background-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius-standard: 8px;
+    --form-element-border: 1px solid #ccc;
+}
+
+/* Full Screen App */
+html, body, #root, .app-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-gray);
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em; /* Increase font size */
+    color: var(--primary-color); /* Change font color */
+}
+
+/* Registration Form */
+.registration-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius-standard);
+    box-shadow: var(--background-shadow);
+    margin-bottom: 20px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: var(--form-element-border);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Product List */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Product Cards */
+.product-card {
+    flex-basis: calc(50% - 20px);
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: var(--border-radius-standard);
+    box-shadow: var(--background-shadow);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+
+    /* Flexbox for layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Additional styles */
+    width: 90%; /* Set a width for the cards */
+    max-width: 300px; /* Limit the maximum width */
+    margin: 20px auto; /* Center the cards and add vertical margin */
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center; /* Centered text */
+    color: var(--primary-color); /* Use the primary color for the title */
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    text-align: center; /* Centered text */
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--hover-background-shadow);
+    background-color: #f5f5f5; /* Change background color on hover */
+}
+
+/* Button Styles */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Me Form */
+.contact-me-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius-standard);
+    box-shadow: var(--background-shadow);
+    margin-bottom: 20px;
+}
+
+.contact-me-form input[type="text"],
+.contact-me-form input[type="email"],
+.contact-me-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: var(--form-element-border);
+    border-radius: 4px;
+    font-size: 14px;
+}
